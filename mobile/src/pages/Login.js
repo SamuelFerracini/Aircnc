@@ -15,16 +15,16 @@ import logo from "../assets/logo.png";
 import api from "../services/api";
 
 export default function Login({ navigation }) {
-  useEffect(() => {
-    AsyncStorage.getItem("user").then(user => {
-      if (user) {
-        navigation.navigate("List");
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   AsyncStorage.getItem("user").then(user => {
+  //     if (user) {
+  //       navigation.navigate("List");
+  //     }
+  //   });
+  // }, []);
 
-  const [email, setEmail] = useState('');
-  const [techs, setTechs] = useState('');
+  const [email, setEmail] = useState("");
+  const [techs, setTechs] = useState("");
   async function handleSubmit() {
     const response = await api.post("/sessions", {
       email
